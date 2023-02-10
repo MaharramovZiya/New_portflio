@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+aside,
+nav,
+footer,
+header,
+section {
+    display: block;
+}
+
+body {
+    font-size: 16px;
+    background: url(images/bg.jpg) center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    width: 100%;
+    background-size: cover;
+    min-height: 100vh;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 320px;
+}
+
+
+button {
+    cursor: pointer;
+    background-color: inherit;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+/* container start
+ */
+._container {
+    max-width: 1240px;
+    margin: 0 auto;transition: all 0.4s ease;
+}
+
+@media (max-width: 1280px) {
+    ._container {
+        max-width: 970px;transition: all 0.4s ease;
+    }
+}
+
+@media (max-width: 991.98px) {
+    ._container {
+        max-width: 750px;transition: all 0.4s ease;
+    }
+}
+
+@media (max-width: 667.98px) {
+    ._container {
+        max-width: none;
+        padding: 0 10px;
+        margin: 0 auto;transition: all 0.4s ease;
+    }
+}
+
+/* container end */
+a,
+a:visited {
+    text-decoration: none;
+}
+
+div {
+    display: block;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.flex-column li a {
+    color: rgb(193, 193, 193);
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+.flex-column li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+textarea {
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+
+img {
+    vertical-align: top;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+/* Observer start */
+
+.hidden{
+    opacity: 0;
+    transition: all 2s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+
+}
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+/* Observer end */
+/* Header start */
+.header_inner.sticky{
+    background-color: rgba(83, 83, 83, 0.515);
+    transition: all 0.2s;
+   
+}
+.header_inner.sticky .bars_menu #openMenu{
+    transition: all 0.2s;
+    filter: invert(0) !important;
+}
+    @media only screen and (max-width:770px) {
+       
+        nav #navLinks{
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #35363888;
+            width: 100%;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(8px);
+            margin-left: -100%;
+            height: 100vh;
+            transition: all 0.4s ease;
+        }
+        #navLinks .nav-item{
+            margin: 30px 0;
+            font-size: 24px;
+            transition: all 0.4s ease;
+            padding: 10px 30px;
+            background-color: transparent;
+            
+        }
+
+        
+        nav #navLinks.mobile-menu {
+            margin-left: 0;
+        }
+     
+        
+    }
+
+    @media only screen and (min-width:770px) {
+        
+        .bars_menu{
+            display: none;
+
+        }
+        .close_menu{
+            display: none;
+        }
+        
+    }
+
+    @media only screen and (max-width:640px) {
+        .header_content{
+            flex-direction: column;
+            align-items: center !important;
+        }
+        .text-content{
+            width: auto !important;
+            padding-left: 10px;
+
+        }
+        .header_content .img-content{
+            display: none;
+        }
+        
+    }
+
+    
+    /* active class i ile animasiyalai duzeldeceksen.*/
+   
+    section{
+        margin: 30px 0;
+    }
+ /*Header end */
+ /* About section start */
+
+ @media only screen and (max-width:640px) {
+    .section-content{
+        flex-direction: column-reverse;
+        align-items: center !important;
+    }
+    .text-content_sec{
+        width: auto !important;
+        padding-left: 10px;
+    }
+    .text-content_sec h3{
+        text-align: center;
+    }
+    
+    .section-content .img-content_sec{
+        display: block;
+    }
+    
+    .contact-section .contact-icons{
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap !important;
+        justify-content: center;
+    }
+    .contact-icons .icon-box{
+        margin: 10px 15px !important;
+        padding: 0 70px;
+    }
+    .contact-heading{
+       padding: 10px 20xp;
+    }
+}
+
+ /* About section end */
+ /* Skills section start */
+ /*Skills---------------------*/
+#skills{
+    width:90%;
+    display: flex;
+    margin:130px auto;
+    padding-top: 120px;
+}
+.skills-text-section{
+    width:100%;
+    margin: 0 auto;
+}
+
+.skill-heading h2{
+    color: #ffffff;
+    font-size: 3.3rem;
+    margin: 0px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.s-box-container{
+    margin-top: 30px;
+    display: flex;
+}
+.skill-box{
+    display: flex;
+    margin: 25px 0px;
+}
+.s-box-icon{
+    margin-right: 12px;
+}
+.s-box-icon i{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f011;
+    font-size: 1.1rem;
+}
+.skill-box strong{
+    color: #ffffff;
+    margin: 0px;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.skill-box p{
+    color: #8a94a783;
+    font-size: 0.9rem;
+    margin: 0 0 30px;
+}
+.fa-html5{
+    color: #e06061;
+}
+.fa-css3-alt{
+    color: #5d85f3;
+}
+.fa-js{
+    color: #f9ca31;
+}
+.progress-line{
+    margin-top: 20px;
+    position: relative;
+    height: 5px;
+    width:100%;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),
+    0px 1px rgba(54, 54, 54, 0.8);
+}
+.progress-line span{
+    height: 100%;
+    background: linear-gradient(90deg,#e6eaed 20%,#8801ff);
+    position: absolute;
+    border-radius: 10px;
+}
+.progress-line.html span{
+    width:100%;
+}
+.progress-line.css span{
+    width:94%;
+}
+.progress-line.js span{
+    width:64%;
+}
+.progress-line.react span{
+    width: 15%;
+}
+.progress-line.sass span{
+    width: 99%;
+}
+.progress-line.bootstrap span{
+    width: 91%;
+}
+.progress-line span::before{
+    position: absolute;
+    content: '';
+    right: 0px;
+    top: -10px;
+    height: 0px;
+    width: 0px;
+    border: 7px solid transparent;
+    border-bottom-width:0px;
+    border-right-width:0px;
+    border-top-color:#8801ff;
+}
+.progress-line span::after{
+    position: absolute;
+    right: 0px;
+    top: -28px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: #8801ff;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+.progress-line.html span::after{
+    content:'100%';
+}
+.progress-line.css span::after{
+    content:'94%';
+}
+.progress-line.js span::after{
+    content:'65%';
+}
+.progress-line.react span::after{
+    content:'15%';
+}
+.progress-line.sass span::after{
+    content:'99%';
+}
+.progress-line.bootstrap span::after{
+    content:'91%';
+}
+@media only screen and (max-width:640px) {
+    .s-box-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Skills section end */
+

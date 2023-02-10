@@ -1,0 +1,275 @@
+// Header start SCSS
+
+.header {
+    .header_inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10000;
+        padding: 0 14px;
+        transition: all 0.2s;
+
+        .logo-box a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100px;
+            }
+        }
+        .logo-box a span {
+            font-size: 40px;
+            margin-top: 20px;
+        }
+
+        .bars_menu {
+            margin-top: 16px;
+        }
+    }
+}
+nav {
+    flex: 1;
+    #navLinks {
+        float: right;
+        margin-bottom: 0;
+        padding: 40px 10px;
+        .close_menu {
+            position: absolute;
+            top: 28px;
+            right: 10px;
+        }
+        li {
+            display: inline-block;
+            margin: 0 25px;
+            padding-top: 15px;
+            font-size: 24px;
+
+            a {
+                color: #fff;
+            }
+            a:hover {
+                color: #616162;
+            }
+        }
+    }
+}
+
+.header_content {
+    margin-top: 240px;
+    color: #fff;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .text-content {
+        width: 50%;
+        animation-name: textContent;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        h1 {
+            font-size: 48px;
+            animation-name: hello;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+
+            @keyframes hello {
+                from {
+                    margin-left: -100%;
+                }
+                to {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        @keyframes textContent {
+            from {
+                margin-left: -100%;
+            }
+            to {
+                margin-left: 0;
+            }
+        }
+
+        p {
+            margin-bottom: 50px;
+        }
+        .imza {
+            font-family: "Passions Conflict", cursive;
+            font-size: 56px;
+            animation-name: imza;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+
+            @keyframes imza {
+                from {
+                    margin-left: -100%;
+                }
+                to {
+                    margin-left: 0;
+                }
+            }
+        }
+        .imza::after {
+            display: block;
+            content: "";
+            border-radius: 4px;
+            width: 10%;
+            background-color: #fff;
+            height: 4px;
+            animation-name: imza;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+        }
+    }
+    .img-content {
+        max-width: 50%;
+        width: 320px;
+        height: 400px;
+        border-radius: 6px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            animation-name: head-foto;
+            animation-duration: 2s;transition: all 0.5s;
+            animation-timing-function: ease;
+
+            @keyframes head-foto {
+                from {
+                    margin-left: 600px;
+                }
+                to {
+                    margin-left: 0;
+                }
+            }
+        }
+        img:hover{
+            transition: all 0.5s;
+            transform: scale(1.1);
+        }
+    }
+}
+.active {
+    color:  rgb(136, 1, 255)!important;
+    transform: scale(1.1);
+    transition: all 0.2s;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transform: scale(1.2);
+    // byrda qalmisan
+}
+// Header end
+
+// About Section start
+.about-section {
+    margin: 80px 0 0;
+    padding-top: 120px;
+
+    position: relative;
+    .section-content {
+        color: #fff;
+        padding: 0 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .img-content_sec {
+            max-width: 100%;
+            width: 320px;
+            height: 400px;
+            border-radius: 6px;
+            position: relative;
+            overflow: hidden;
+           
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                position: absolute;
+                transition: all 0.5s;
+                
+            }
+            img:hover{
+                transition: all 0.5s;
+                transform: scale(1.1);
+            }
+           
+        }
+        
+
+        .text-content_sec {
+            width: 50%;
+            position: relative;
+            p {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+// About Section end
+// Contact Section Start
+.contact-section{
+    margin-top: 100px;
+    padding: 100px 0;
+    .contact-heading{
+        color: rgb(244, 244, 244);
+        h1{
+            text-align: center;
+            font-weight: 500;
+        }
+    }
+    .contact-icons{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        max-width: 800px;
+        width: 100%;
+        height: auto;
+        margin: 50px auto;
+        .icon-box{
+            width: 200px;
+            height: 200px;
+            margin: 0 15px;
+            background-color: transparent;
+            border: 2px solid #ffffffa2;
+            border-radius: 7px;
+            box-shadow: rgba(183, 181, 181, 0.411) 0px 7px 29px 0px;
+            position: relative;transition: all 0.2s;
+           
+            i{
+                color: #fff;
+                font-size: 50px;
+                position: absolute;
+                top: 50%;
+                left: 50%;transition: all 0.2s;
+                transform: translate(-50%,-50%);
+            }
+            i:hover{
+                color:  rgb(136, 1, 255);
+            }
+            
+            
+        }
+        
+
+        .icon-box:nth-child(2){
+            transition-delay: 200ms;
+        }
+        .icon-box:nth-child(3){
+            transition-delay: 400ms;
+        }
+        .icon-box:nth-child(4){
+            transition-delay: 600ms;
+        }
+    }
+}   
+
+// Contact Section end

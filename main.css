@@ -1,0 +1,302 @@
+.header .header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  padding: 0 14px;
+  transition: all 0.2s;
+}
+.header .header_inner .logo-box a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .header_inner .logo-box a img {
+  width: 100px;
+}
+.header .header_inner .logo-box a span {
+  font-size: 40px;
+  margin-top: 20px;
+}
+.header .header_inner .bars_menu {
+  margin-top: 16px;
+}
+
+nav {
+  flex: 1;
+}
+nav #navLinks {
+  float: right;
+  margin-bottom: 0;
+  padding: 40px 10px;
+}
+nav #navLinks .close_menu {
+  position: absolute;
+  top: 28px;
+  right: 10px;
+}
+nav #navLinks li {
+  display: inline-block;
+  margin: 0 25px;
+  padding-top: 15px;
+  font-size: 24px;
+}
+nav #navLinks li a {
+  color: #fff;
+}
+nav #navLinks li a:hover {
+  color: #616162;
+}
+
+.header_content {
+  margin-top: 240px;
+  color: #fff;
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.header_content .text-content {
+  width: 50%;
+  -webkit-animation-name: textContent;
+          animation-name: textContent;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+.header_content .text-content h1 {
+  font-size: 48px;
+  -webkit-animation-name: hello;
+          animation-name: hello;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+@-webkit-keyframes hello {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes hello {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@-webkit-keyframes textContent {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes textContent {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+.header_content .text-content p {
+  margin-bottom: 50px;
+}
+.header_content .text-content .imza {
+  font-family: "Passions Conflict", cursive;
+  font-size: 56px;
+  -webkit-animation-name: imza;
+          animation-name: imza;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes imza {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes imza {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+.header_content .text-content .imza::after {
+  display: block;
+  content: "";
+  border-radius: 4px;
+  width: 10%;
+  background-color: #fff;
+  height: 4px;
+  -webkit-animation-name: imza;
+          animation-name: imza;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+.header_content .img-content {
+  max-width: 50%;
+  width: 320px;
+  height: 400px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.header_content .img-content img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  -webkit-animation-name: head-foto;
+          animation-name: head-foto;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  transition: all 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+@-webkit-keyframes head-foto {
+  from {
+    margin-left: 600px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes head-foto {
+  from {
+    margin-left: 600px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+.header_content .img-content img:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+
+.active {
+  color: rgb(136, 1, 255) !important;
+  transform: scale(1.1);
+  transition: all 0.2s;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transform: scale(1.2);
+}
+
+.about-section {
+  margin: 60px 0 0;
+  padding-top: 160px;
+
+  position: relative;
+}
+.about-section .section-content {
+  color: #fff;
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.about-section .section-content .img-content_sec {
+  max-width: 100%;
+  width: 320px;
+  height: 400px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.about-section .section-content .img-content_sec img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  transition: all 0.5s;
+}
+.about-section .section-content .img-content_sec img:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+.about-section .section-content .text-content_sec {
+  width: 50%;
+  position: relative;
+}
+.about-section .section-content .text-content_sec p {
+  margin-bottom: 50px;
+}
+#skills{
+  padding-top: 160px;
+}
+.contact-section {
+  margin-top: 50px;
+  padding: 140px;
+}
+.contact-section .contact-heading {
+  color: rgb(244, 244, 244);
+}
+.contact-section .contact-heading h1 {
+  text-align: center;
+  font-weight: 500;
+}
+.contact-section .contact-icons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin: 50px auto;
+}
+.contact-section .contact-icons .icon-box {
+  width: 200px;
+  height: 200px;
+  margin: 0 15px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6352941176);
+  border-radius: 7px;
+  box-shadow: rgba(183, 181, 181, 0.411) 0px 7px 29px 0px;
+  position: relative;
+  transition: all 0.2s;
+}
+.contact-section .contact-icons .icon-box i {
+  color: #fff;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all 0.2s;
+  transform: translate(-50%, -50%);
+}
+.contact-section .contact-icons .icon-box i:hover {
+  color: rgb(136, 1, 255);
+}
+.contact-section .contact-icons .icon-box:nth-child(2) {
+  transition-delay: 200ms;
+}
+.contact-section .contact-icons .icon-box:nth-child(3) {
+  transition-delay: 400ms;
+}
+.contact-section .contact-icons .icon-box:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+
+/*# sourceMappingURL=main.css.map */
